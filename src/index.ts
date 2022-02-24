@@ -108,7 +108,7 @@ setTimeout(() => {
             state.push(data);
             console.log(state);
 
-            store.dispatch(actions.incomMes(state));
+            store.dispatch(actions.success(state));
         }
     });
 }, 1000);
