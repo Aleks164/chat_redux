@@ -13,6 +13,11 @@ export const success = (payload: any) => ({
     payload
 });
 
+export const incomMes = (payload: any) => ({
+    type: "incomMes",
+    payload
+});
+
 export const anyError = (error: Error) => ({
     type: "error",
     error

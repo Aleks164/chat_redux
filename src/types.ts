@@ -2,6 +2,7 @@ export type RenderData = {
     isLoading: boolean;
     data: any | undefined;
     error: Error | undefined;
+    incomMesOn: boolean;
 };
 
 export type MessageType = {

@@ -31,19 +31,27 @@ async function loadData() {
 }
 
 const render = (props: RenderData) => {
-    if (props.isLoading) {
+    if (props.isLoading && !props.incomMesOn) {
         loadStatus.classList.add("loading");
     }
     if (props.error) {
         loadStatus.classList.remove("loading");
         loadStatus.classList.add("error");
     }
-    if (props.data) {
+    if (props.data && !props.incomMesOn) {
         el.innerHTML = contentMList(props.data);
         loadStatus.classList.remove("loading");
         loadStatus.classList.add("success");
         setTimeout(() => {
             loadStatus.classList.remove("success");
+        }, 2500);
+    }
+    if (props.incomMesOn) {
+        loadStatus.classList.remove("loading");
+        loadStatus.classList.remove("success");
+        loadStatus.classList.add("incomMesOn");
+        setTimeout(() => {
+            loadStatus.classList.remove("incomMesOn");
         }, 2500);
     }
 };
@@ -65,6 +73,7 @@ const selectData = (state: State): RenderData => ({
     isLoading: state.isLoading,
     data: state.data,
     error: state.error,
+    incomMesOn: state.incomMesOn
 });
 
 identificationWindow();
@@ -99,7 +108,7 @@ setTimeout(() => {
             state.push(data);
             console.log(state);
 
-            store.dispatch(actions.success(state));
+            store.dispatch(actions.incomMes(state));
         }
     });
 }, 1000);
