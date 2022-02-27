@@ -1,0 +1,268 @@
+html {
+  max-width: 980px;
+  margin: auto;
+  background-color: #f5f5f0;
+}
+body {
+  overflow-y: hidden;
+}
+form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-width: 650px;
+}
+#loadStatus {
+  display: inline-block;
+  margin-left: 30px;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+}
+.loading {
+  background-image: url(./image/1fcc1256cd98f5e57485.gif);
+}
+.error {
+  background-image: url(./image/fd83b42e530d1d6d1ed1.gif);
+}
+.success {
+  background-image: url(./image/efdc3a39e31c0d5211fa.gif);
+}
+.incomMesOn {
+  background-image: url(./image/cdce2edb972c6fecf1ba.gif);
+}
+
+#app {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%), -23px 0 20px -23px rgb(0 0 0 / 80%),
+    23px 0 20px -23px rgb(0 0 0 / 80%), 0 0 40px rgb(0 0 0 / 10%) inset;
+}
+#textInput {
+  min-width: 400px;
+  font-size: 24px;
+  height: 56px;
+}
+.message {
+  font-size: 22px;
+  background-color: aqua;
+  border-radius: 19% 10%;
+  width: fit-content;
+  padding: 3%;
+  border: 2px solid blue;
+  margin: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+hr {
+  margin-top: 20px;
+}
+.items {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: end;
+}
+.massageBlock {
+  position: relative;
+}
+.time {
+  margin: 0;
+  right: 20px;
+  position: absolute;
+  bottom: -15px;
+  font-size: 20px;
+  width: 175px;
+  height: 20px;
+}
+.name {
+  text-decoration: underline;
+  margin: 0;
+  font-size: 25px;
+  margin-right: 15px;
+}
+.modalWindow {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.opacityWindow {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  background-color: beige;
+  opacity: 0.8;
+}
+#mainWindow {
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%), -23px 0 20px -23px rgb(0 0 0 / 80%),
+    23px 0 20px -23px rgb(0 0 0 / 80%), 0 0 40px rgb(0 0 0 / 10%) inset;
+  z-index: 10;
+  width: 250px;
+  height: 210px;
+  margin: 0;
+  border: 2px solid;
+  background: rgb(219 222 227);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#modalInput {
+  font-size: 33px;
+  width: 80%;
+  margin: 20px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+#modalsubmit {
+  margin: 20px;
+  font-size: 20px;
+  width: 84%;
+  position: relative;
+  display: inline-block;
+  color: #322712;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgb(255 255 255 / 50%) 1px 1px,
+    rgb(146 138 138 / 30%) 3px 7px 3px;
+  user-select: none;
+  padding: 5%;
+  outline: none;
+  border-radius: 3px / 100%;
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0) 20%,
+      rgb(40 90 155 / 27%) 90%,
+      rgb(179 54 54 / 30%)
+    ),
+    linear-gradient(
+      to right,
+      rgb(81 87 179),
+      rgb(174 30 30 / 90%) 45%,
+      rgb(191 28 28 / 50%)
+    ),
+    linear-gradient(
+      to right,
+      rgb(201 21 21),
+      rgb(142 25 25 / 90%) 45%,
+      rgb(183 23 23 / 50%)
+    ),
+    linear-gradient(
+      to right,
+      rgba(223, 190, 170, 1),
+      rgba(255, 255, 255, 0.9) 45%,
+      rgb(191 110 60 / 50%)
+    ),
+    linear-gradient(
+      to right,
+      rgb(176 124 93),
+      rgb(226 195 223 / 90%) 45%,
+      rgb(226 214 206 / 50%)
+    );
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgb(0 0 0 / 50%) 3px 10px 10px -10px;
+}
+
+#modalsubmit:hover {
+  transition: 0.5s linear;
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+#modalsubmit:active {
+  top: 1px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.btn-12 {
+  position: relative;
+  right: 20px;
+  bottom: 60px;
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  padding-top: 5px;
+  font-size: 22px;
+  background: linear-gradient(0deg, rgb(117 126 174) 0%, rgb(148 208 233) 100%);
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 55px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
