@@ -68,7 +68,8 @@
       "prettier --write",
       "eslint --cache --fix --ext .js,.ts"
     ],
-    "*.css,md,yml": "prettier --write"
+    "*.{css,md,yml}": "prettier --write",
+    "*.css": "stylelint --fix"
   },
   "dependencies": {
     "redux": "^4.1.2"

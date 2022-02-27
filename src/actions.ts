@@ -1,24 +1,25 @@
+import { MessageType } from "./types";
 
 export const identification = (curUser: string) => ({
-    type: "identification",
-    curUser
+  type: "identification",
+  curUser,
 });
 
 export const loading = () => ({
-    type: "loading",
+  type: "loading",
 });
 
-export const success = (payload: any) => ({
-    type: "success",
-    payload
+export const success = (payload: MessageType[]) => ({
+  type: "success",
+  payload,
 });
 
-export const incomMes = (payload: any) => ({
-    type: "incomMes",
-    payload
+export const incomMes = (payload: MessageType[]) => ({
+  type: "incomMes",
+  payload,
 });
 
 export const anyError = (error: Error) => ({
-    type: "error",
-    error
+  type: "error",
+  error,
 });
