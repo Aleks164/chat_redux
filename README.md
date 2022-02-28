@@ -1,3 +1,5 @@
+click here: https://aleks164.github.io/chat_redux/
+
 ##Разработка приложение "чат" на основе redux
 
 Необходимо:
