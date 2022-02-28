@@ -40,13 +40,12 @@ export function createApp(el: HTMLElement) {
   setTimeout(() => {
     observeWithEventSource((data: MessageType) => {
       if (data.date) {
-        console.log(data);
 
         const state = store.getState().data;
-        console.log(state);
         if (state) {
+
+          data = { ...data, date: new Date(data.date) }
           state.push(data);
-          console.log(state);
 
           store.dispatch(actions.incomMes(state));
         }
